@@ -22,17 +22,17 @@ tasks.register("templateCleanup") {
     }
 
     file("settings.gradle.kts").replace(
-        "rootProject.name = (\"kotlin-android-template\")",
+        "rootProject.name = (\"twitter-code-challenge\")",
         "rootProject.name = (\"$name\")"
     )
     file("buildSrc/src/main/java/Coordinates.kt").replace(
-        "com.ncorti.kotlin.template",
+        "com.twitter.challenge",
         "com.github.$owner.$name"
     )
 
     file("buildSrc/src/main/kotlin/publish.gradle.kts").apply {
-        replace("cortinico/kotlin-android-template", "$owner/$name")
-        replace("cortinico/kotlin-android-template", "$owner/$name")
+        replace("cortinico/twitter-code-challenge", "$owner/$name")
+        replace("cortinico/twitter-code-challenge", "$owner/$name")
         replace("cortinico", owner)
         replace("Nicola Corti", owner)
         // Keep the link to the original script
@@ -91,7 +91,7 @@ fun changePackageName(owner: String, name: String) {
         it.walk().filter {
             it.isFile && (it.extension == "kt" || it.extension == "kts"  || it.extension == "xml")
         }.forEach {
-            it.replace("com.ncorti.kotlin.template", "com.github.$owner.$name")
+            it.replace("com.twitter.challenge", "com.github.$owner.$name")
         }
     }
     srcDirectories().forEach {
@@ -100,8 +100,8 @@ fun changePackageName(owner: String, name: String) {
             .forEach {
                 val newDir = File(it, "com/github/$owner/$name")
                 newDir.parentFile.mkdirs()
-                File(it, "com/ncorti/kotlin/template").renameTo(newDir)
-                File(it, "com/ncorti").deleteRecursively()
+                File(it, "com/twitter/challenge").renameTo(newDir)
+                File(it, "com/twitter").deleteRecursively()
             }
     }
 }

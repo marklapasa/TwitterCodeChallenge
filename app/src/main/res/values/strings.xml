@@ -1,8 +1,12 @@
 <resources>
-    <string name="app_name">Kotlin Android Template</string>
-    <string name="title">This is just a template</string>
-    <string name="description">You can compute a factorial using the library-kotlin module. The result will be also shown in a notification using the library-android module.</string>
-    <string name="factorial_hint">Insert a number to compute his factorial</string>
-    <string name="compute">Compute</string>
-    <string name="notification_title">The Result is:</string>
+    <string name="app_name">Tweather</string>
+    <string name="current_temperature">Current temperature</string>
+    <string name="temperature">%1$f °C / %2$f °F</string>
+    <string name="refresh">Refresh</string>
+    <string name="change_units">Change Units</string>
+    <string name="empty_view_note">Tap on Refresh button to get weather data</string>
+    <string name="choose_unit">Choose Unit</string>
+    <string name="internet_conn_alert">Internet Connection Alert</string>
+    <string name="please_check_your_internet">Please Check Your Internet Connection</string>
+    <string name="close">Close</string>
 </resources>

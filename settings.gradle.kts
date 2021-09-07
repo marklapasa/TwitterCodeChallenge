@@ -16,10 +16,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = ("kotlin-android-template")
+rootProject.name = ("twitter-code-challenge")
 
-include(
-    "app",
-    "library-android",
-    "library-kotlin"
-)
+include("app")
